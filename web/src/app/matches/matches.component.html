@@ -1,0 +1,54 @@
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>IPL 2020</h2>
+      <div *ngFor="let item of matchesList; let i = index">
+        <div class="col-md-4">          
+            <div>{{item.teamA}} <strong>Vs</strong>  {{item.teamB}}</div>
+            <div>Winner of Match: <strong>{{item.winner}}</strong></div>
+            <div>Date : {{item.date}}</div>
+            <p>Venue: {{item.venue}}</p>
+            <div> Man Of the Matche <strong>{{item.man_of_match}}   </strong>           </div>
+         
+        </div>
+      </div>
+      
+    </div>
+  </div> -->
+
+  <div class="container">
+    <h2> Matches List</h2>
+    <div class="row">
+      <div class="col-12">
+          <table class="table table-image">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>TeamA</th>
+                <th>TeamB</th>
+                <th>Match Date</th>
+                <th>Venue</th>
+                <th>Winner of Match</th>
+                <th>Man of the match</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            
+              <tr *ngFor="let item of matchesList; let i = index">
+                <th>{{i+1}}</th>
+                <td>{{item.teamA}}</td>
+                <td>{{item.teamB}}</td>
+                <td>{{item.date}}</td>
+                <td>{{item.venue}}</td>
+                <td><strong>{{item.winner}}</strong></td>
+                <td>{{item.man_of_match}}</td>              
+                <td>  <a [routerLink]="['/match-teams', item.id]" class="btn btn-warning">View</a> </td>              
+              </tr>
+              
+            </tbody>
+          </table>   
+      </div>
+    </div>
+</div>

@@ -1,0 +1,93 @@
+
+
+<div class="container" style="margin-bottom: 50px;margin-top: 50px;">
+    <button [routerLink]="['/matches']" class="btn btn-default">Back</button>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Match {{matchId}} </h2>
+            <p>{{matchDate}}</p>
+           
+        </div>
+        <div class="col-md-6 pull-right">
+            <p>Match Winner: <strong> {{matchesDetails.winner}}</strong> </p>
+            <p>Man of Match: <strong> {{matchesDetails.man_of_match}}</strong></p>
+        </div>
+    </div>
+    
+<div class="row">
+        <div class="col-md-6">
+            <img width="50" src="http://localhost:8000/team_logos/{{teamA.logo}}" class="img-fluid img-thumbnail" alt="Sheep">
+              {{teamA.name}}    
+            <div class="playersA">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let players of teamA.players" >
+                        <div class="card">
+                            <img width="153" height="114" src="http://localhost:8000/players/{{players.image}}" alt="{{players.firstname}}" style="width:100%">
+                            <h6>{{players.firstname}} {{players.lastname}}</h6>
+                            <span class="title">Score: {{players.score}}</span>
+                            <span class="title">Fifties: {{players.fifties}}</span>
+                            <span class="title">Hundreds: {{players.hundreds}}</span>
+                            <span class="title">Wickets: {{players.wickets}}</span>
+                            <button class="button">Contact</button>
+                          </div>
+                    </div>                    
+                </div>               
+                  
+            </div> 
+          </div>
+          <div class="col-md-6">
+            <img width="50" src="http://localhost:8000/team_logos/{{teamB.logo}}" class="img-fluid img-thumbnail" alt="Sheep">
+              {{teamB.name}}     
+            <div class="playersB">
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let players of teamB.players" >
+                        <div class="card">
+                            <img width="153" height="114" src="http://localhost:8000/players/{{players.image}}" alt="{{players.firstname}}" style="width:100%">
+                            <h6>{{players.firstname}} {{players.lastname}}</h6>
+                            <span class="title">Score: {{players.score}}</span>
+                            <span class="title">Fifties: {{players.fifties}}</span>
+                            <span class="title">Hundreds: {{players.hundreds}}</span>
+                            <span class="title">Wickets: {{players.wickets}}</span>
+                            <button class="button">Contact</button>
+                          </div>
+                    </div>                    
+                </div>
+            </div> 
+    </div>
+</div>
+  
+  
+</div> 
+  <!--   <img src="http://localhost:8000/team_logos/{{teamDetails.team_logo}}" class="img-fluid img-thumbnail" alt="Sheep">
+      {{teamDetails.team}} Teams List -->
+            
+<!--  <table class="table table-image">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Best Score</th>
+            <th scope="col">Total Runs</th>
+            <th scope="col">Total Fifties</th>
+            <th scope="col">Total Hundreds</th>
+            <th scope="col">Total Wickets</th>
+            <th scope="col">Image</th>
+
+          </tr>
+        </thead>
+        <tbody>
+        
+          <tr *ngFor="let item of playersList; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <th scope="row">{{item.firstname}} {{item.lastname}}</th>
+            <td>{{item.best_score}}</td>
+            <td>{{item.runs}}</td>
+            <td>{{item.fifties}}</td>
+            <td>{{item.hundreds}}</td>
+            <td>{{item.wickets}}</td>
+            <td class="w-25">
+              <img width="100" height="150" src="http://localhost:8000/players/{{item.image}}" class="img-fluid img-thumbnail img-responsive" alt="Sheep">
+          </td>
+          </tr>                      
+        </tbody>
+      </table>  -->

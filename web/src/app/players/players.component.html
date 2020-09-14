@@ -1,0 +1,49 @@
+
+
+<div class="container" style="margin-bottom: 50px;">
+  <h2>
+    <img src="http://localhost:8000/team_logos/{{teamDetails.team_logo}}" class="img-fluid img-thumbnail" alt="Sheep">
+    {{teamDetails.team}} Teams List </h2>
+
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-image">
+                    <thead>
+                      <tr>
+                        <th scope="col">S.No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Jersey number</th>
+                        <th scope="col">Played Matches</th>                        
+                        <th scope="col">Best Score</th>
+                        <th scope="col">Total Runs</th>
+                        <th scope="col">Total Fifties</th>
+                        <th scope="col">Total Hundreds</th>
+                        <th scope="col">Total Wickets</th>
+                        <th scope="col">Image</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                    
+                      <tr *ngFor="let item of playersList; let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <th scope="row">{{item.firstname}} {{item.lastname}}</th>
+
+                        <td>{{item.jersey_number}}</td>
+                        <td>{{item.played_matches}}</td>
+                        <td>{{item.best_score}}</td>
+                        <td>{{item.runs}}</td>
+                        <td>{{item.fifties}}</td>
+                        <td>{{item.hundreds}}</td>
+                        <td>{{item.wickets}}</td>
+                        <td class="w-25">
+                          <img width="100" height="150" src="http://localhost:8000/players/{{item.image}}" class="img-fluid img-thumbnail img-responsive" alt="Sheep">
+                      </td>
+                      </tr>                      
+                    </tbody>
+                  </table>   
+              </div>
+            </div>
+          </div> 
+
+          

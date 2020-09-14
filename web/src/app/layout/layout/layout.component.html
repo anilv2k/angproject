@@ -1,0 +1,40 @@
+<!-- <html>
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body class="container"> 
+    <app-header>   </app-header>
+
+    <router-outlet ></router-outlet>
+    </body>
+    <app-footer> </app-footer>
+</html>
+          -->
+          
+
+<!-- <html>
+<head>
+    <title>Dashboard</title>
+    </head>
+    <body class="container"> 
+
+    <app-header></app-header>
+    <div class="container">
+    <div class="page-content">
+        <ng-content></ng-content>
+    </div>  
+    </div>
+    <app-footer></app-footer>
+    </body>
+</html> -->
+
+    <div class="container"> 
+        <app-header *ngIf="isLoggedIn"></app-header>
+        
+            <div class="page-content">
+                <ng-content></ng-content>
+            </div>  
+        
+        <app-footer></app-footer>
+    </div>
+    
