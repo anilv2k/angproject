@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 
 export class Service {
-    private api_url = "http://localhost:8000/api/";
+    private api_url = "http://localhost/api/public/api/";
     constructor(private http: HttpClient) { }
 
     login(value){
